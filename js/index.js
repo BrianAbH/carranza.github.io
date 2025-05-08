@@ -29,7 +29,7 @@ function mostrarValores() {
   Género: ${generoValor}
   Visto por: ${redes.join(', ') || 'Ninguno'}
     `;
-  if(nombre.length && apellido.length && edad.length && correo.length && carrera.length && telefono.length && fechaInscripcion.length && generoValor.lenght > 0  ){  
+  if(nombre.length && apellido.length && edad.length && correo.length && carrera.length && telefono.length && fechaInscripcion.length > 0){  
     alert(resultado.trim());
   }else{
     alert("Ingrese todos los datos");
