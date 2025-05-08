@@ -17,7 +17,7 @@ function mostrarValores() {
     }
   });
 
-  const generoValor = genero ? genero.value : "Ninguno";
+  const generoValor = genero ? genero.value : 'No seleccionado';
 
   const resultado = `    
   Nombre: ${nombre}
