@@ -29,11 +29,9 @@ function mostrarValores() {
   Género: ${generoValor}
   Visto por: ${redes.join(', ') || 'Ninguno'}
     `;
-  if(nombre.length && apellido.length && edad.length && correo.length && carrera.length && telefono.length && fechaInscripcion.length > 0){  
-    alert(resultado.trim());
-  }else{
+  if(nombre.length && apellido.length && edad.length && correo.length && carrera.length && telefono.length && fechaInscripcion.length < 0){  
     alert("Ingrese todos los datos");
+  }else{
+    alert(resultado.trim());
   }
-
-
 }
