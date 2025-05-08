@@ -17,7 +17,7 @@ function mostrarValores() {
     }
   });
 
-  const generoValor = genero ? genero.value : alert("Seleccione un genero");
+  const generoValor = genero ? genero.value : "Ninguno";
 
   const resultado = `    
   Nombre: ${nombre}
