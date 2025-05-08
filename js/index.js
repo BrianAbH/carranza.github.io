@@ -8,7 +8,7 @@ function mostrarValores() {
   const fechaInscripcion = document.getElementById('fecha').value;
 
   const genero = document.querySelector('input[name="genero"]:checked');
-  
+  const generoValor = genero ? genero.value : 'No seleccionado';
 
   const redes = [];
   document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
@@ -17,7 +17,6 @@ function mostrarValores() {
     }
   });
 
-  const generoValor = genero ? genero.value : 'No seleccionado';
 
   const resultado = `    
   Nombre: ${nombre}
@@ -32,6 +31,8 @@ function mostrarValores() {
     `;
   if(nombre.length && apellido.length && edad.length && correo.length && carrera.length && telefono.length && fechaInscripcion.length> 0){  
     alert(resultado.trim());
+  }else{
+    alert("Ingrese todos los datos");
   }
 
 
