@@ -16,8 +16,7 @@ function mostrarValores() {
       redes.push(checkbox.value);
     }
   });
-
-
+  
   const resultado = `    
   Nombre: ${nombre}
   Apellido: ${apellido}
@@ -29,9 +28,22 @@ function mostrarValores() {
   Género: ${generoValor}
   Visto por: ${redes.join(', ') || 'Ninguno'}
     `;
-  if(nombre.length && apellido.length && edad.length && correo.length && carrera.length && telefono.length && fechaInscripcion.length < 0){  
-    alert("Ingrese todos los datos");
-  }else{
+  if(nombre.length && apellido.length && edad.length && correo.length && carrera.length && telefono.length && fechaInscripcion.length > 0){  
     alert(resultado.trim());
+    limpiar();
+  }else{
+    alert("Ingrese todos los datos");
   }
+}
+
+function limpiar(){
+    document.getElementById('nombre').value ="";
+    document.getElementById('apellido').value ="";
+    document.getElementById('edad').value ="";
+    document.getElementById('correo').value ="";
+    document.getElementById('carreras').value ="";
+    document.getElementById('telefono').value ="";
+    document.getElementById('fecha').value ="";
+    document.querySelector('input[name="genero"]:checked').checked = false;
+    document.querySelector('input[type="checkbox"]').checked = false;
 }
